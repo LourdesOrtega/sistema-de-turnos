@@ -1,5 +1,15 @@
 {
-  "pacientes": [],
+  "pacientes": [
+    {
+      "nombre": "Belen Bulacio",
+      "dni": "40533548",
+      "fechaNacimiento": "1996-01-21",
+      "telefono": "3815573972",
+      "obraSocial": "Subsidio",
+      "id": "BM4Szxnd2Ek"
+    }
+  ],
   "profesionales": [],
-  "turnos": []
+  "turnos": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }
