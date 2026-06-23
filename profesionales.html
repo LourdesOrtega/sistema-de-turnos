@@ -41,12 +41,13 @@
 
     </header>
 
+
     <main class="container py-4">
 
         <div class="mb-4">
             <h1 class="h3">
                 <i class="bi bi-person-vcard"></i>
-                Gestión de Pacientes
+                Gestión de Profesionales
             </h1>
         </div>
 
@@ -54,49 +55,63 @@
 
             <div class="card-header bg-white">
                 <h2 class="h5 mb-0">
-                        Nuevo Paciente
-                </h2>
+                    Profesionales </h2>
             </div>
 
             <div class="card-body">
 
-                <form id="formPaciente" class="row g-3 mb-4">
+                <form id="formProfesional" class="row g-3 mb-4">
 
-                    <input type="hidden" id="pacienteId">
+                    <input type="hidden" id="profesionalId">
 
                     <div class="col-md-6">
-                        <label for="nombrePaciente" class="form-label">
+                        <label for="nombreProfesional" class="form-label">
                             Nombre y Apellido
                         </label>
-                        <input type="text" id="nombrePaciente" class="form-control" required>
+                        <input type="text" id="nombreProfesional" class="form-control" required>
                     </div>
 
                     <div class="col-md-6">
-                        <label for="dniPaciente" class="form-label">
+                        <label for="dniProfesional" class="form-label">
                             DNI
                         </label>
-                        <input type="text" id="dniPaciente" class="form-control" required>
+                        <input type="text" id="dniProfesional" class="form-control" required>
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="fechaNacimientoPaciente" class="form-label">
-                            Fecha de nacimiento
+                    <div class="col-md-6">
+                        <label for="especialidadProfesional" class="form-label">
+                            Especialidad
                         </label>
-                        <input type="date" id="fechaNacimientoPaciente" class="form-control" required>
+                        <input type="text" id="especialidadProfesional" class="form-control" required>
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="telefonoPaciente" class="form-label">
+                    <div class="col-md-6">
+                        <label for="matriculaProfesional" class="form-label">
+                            Matrícula
+                        </label>
+                        <input type="text" id="matriculaProfesional" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="telefonoProfesional" class="form-label">
                             Teléfono
                         </label>
-                        <input type="text" id="telefonoPaciente" class="form-control" required>
+                        <input type="text" id="telefonoProfesional" class="form-control" required>
                     </div>
 
-                    <div class="col-md-4">
-                        <label for="obraSocialPaciente" class="form-label">
-                            Obra Social
+                    <div class="col-md-6">
+                        <label for="emailProfesional" class="form-label">
+                            Email
                         </label>
-                        <input type="text" id="obraSocialPaciente" class="form-control" required>
+                        <input type="email" id="emailProfesional" class="form-control" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="diasAtencionProfesional" class="form-label">
+                            Días de atención
+                        </label>
+                        <input type="text" id="diasAtencionProfesional" class="form-control"
+                            placeholder="Lunes, Miércoles y Viernes" required>
                     </div>
 
                     <div class="col-12 text-end">
@@ -107,25 +122,28 @@
 
                         <button type="submit" class="btn btn-success">
                             <i class="bi bi-save"></i>
-                            Guardar Paciente
+                            Guardar profesional
                         </button>
 
                     </div>
 
                 </form>
 
-                <div id="contenedorPacientes" class="row g-3"></div>
+
+
+                <div id="contenedorProfesionales" class="row g-3">
+
+                </div>
 
             </div>
 
         </section>
-
     </main>
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="./js/pacientes.js"></script>
-
+<script src="./js/profesionales.js"></script>
 </body>
 
 </html>
