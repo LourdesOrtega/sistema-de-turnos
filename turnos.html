@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Turnos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-light">
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex flex-column">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Sistema de Turnos </a>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pacientes.html">Pacientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profesionales.html">Profesionales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="turnos.html">Turnos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="container py-4">
+
+        <div class="mb-4">
+            <h1 class="h3">
+                <i class="bi bi-person-vcard"></i>
+                Gestión de Turnos
+            </h1>
+        </div>
+
+        <section class="card shadow-sm">
+
+            <div class="card-header bg-white">
+                <h2 class="h5 mb-0">
+                    Nuevo Turno
+                </h2>
+            </div>
+
+            <div class="card-body">
+
+                <form id="formTurnos" class="row g-3 mb-4">
+
+                    <input type="hidden" id="turnosId">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label for="paciente" class="form-label">
+                                Paciente
+                            </label>
+                            <select id="paciente" class="form-select" required>
+                                <option value="" selected disabled hidden>Seleccioná un paciente</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="profesional" class="form-label">
+                                Profesional
+                            </label>
+                            <select id="profesional" class="form-select" required>
+                                <option value="" selected disabled hidden>Seleccioná un profesional</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="obrasSociales" class="form-label">
+                                Obra Social
+                            </label>
+
+                            <select id="obrasSociales" class="form-select" required>
+                                <option value="" selected disabled hidden>Seleccioná una obra social</option>
+                                <option value="obraSocial1">Subsidio</option>
+                                <option value="obraSocial2">Boreal</option>
+                                <option value="obraSocial3">Swiss Medical</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="fecha" class="form-label">
+                                Fecha
+                            </label>
+
+                            <input type="date" id="fecha" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="hora" class="form-label">
+                                Hora
+                            </label>
+
+                            <input type="time" id="hora" class="form-control" required>
+                        </div>
+
+
+                        <div class="col-12">
+                            <label for="observacion" class="form-label">
+                                Observación
+                            </label>
+
+                            <textarea id="observacion" class="form-control" rows="3"
+                                placeholder="Escribí una observación si es necesaria..."></textarea>
+                        </div>
+
+
+                        <div class="col-12 text-end">
+                            <button type="reset" class="btn btn-outline-secondary">
+                                Limpiar
+                            </button>
+
+                            <button type="button" id="btnGuardarTurno" class="btn btn-success">
+                                <i class="bi bi-save"></i>
+                                Guardar turno
+                            </button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/turnos.js"></script>
+</body>
+
+</html>

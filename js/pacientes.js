@@ -14,22 +14,34 @@ function renderizarPacientes(pacientes) {
 
     pacientes.forEach(function (paciente) {
         contenedorPacientes.innerHTML += `
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5>${paciente.nombre}</h5>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">${paciente.nombre}</h5>
+                    </div>
+                                     <div class="card-body">
                         <p><strong>DNI:</strong> ${paciente.dni}</p>
                         <p><strong>Fecha nacimiento:</strong> ${paciente.fechaNacimiento}</p>
                         <p><strong>Teléfono:</strong> ${paciente.telefono}</p>
                         <p><strong>Obra social:</strong> ${paciente.obraSocial}</p>
+                        </div> 
+                    <div class="card-footer d-flex justify-content-between">
 
-                        <button class="btn btn-sm btn-outline-primary" onclick="editarPaciente('${paciente.id}')">
+                        <button
+                            class="btn btn-warning btn-sm"
+                            onclick="editarPaciente('${paciente.id}')"
+                        >
                             Editar
                         </button>
 
-                        <button class="btn btn-sm btn-outline-danger" onclick="eliminarPaciente('${paciente.id}')">
+                        <button
+                            class="btn btn-danger btn-sm"
+                            onclick="eliminarPaciente('${paciente.id}')"
+                        >
                             Eliminar
                         </button>
+
+                    </div>
                     </div>
                 </div>
             </div>
