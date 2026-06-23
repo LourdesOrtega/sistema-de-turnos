@@ -13,15 +13,11 @@ const emailProfesional = document.getElementById("emailProfesional");
 const diasAtencionProfesional = document.getElementById("diasAtencionProfesional");
 
 
-// INICIO
 
 document.addEventListener("DOMContentLoaded", () => {
     obtenerProfesionales();
 });
 
-// =====================
-// GET
-// =====================
 async function obtenerProfesionales() {
     try {
         const response = await axios.get(API_URL);
@@ -31,8 +27,6 @@ async function obtenerProfesionales() {
     }
 }
 
-
-// RENDER
 
 function renderizarProfesionales(profesionales) {
 
@@ -91,8 +85,6 @@ function renderizarProfesionales(profesionales) {
 }
 
 
-// CREATE 
-
 formProfesional.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -109,12 +101,11 @@ formProfesional.addEventListener("submit", async (e) => {
     try {
         if (profesionalId.value) {
 
-            // UPDATE
             await axios.put(`${API_URL}/${profesionalId.value}`, profesional);
 
         } else {
 
-            // CREATE
+   
             await axios.post(API_URL, profesional);
         }
 
@@ -127,7 +118,7 @@ formProfesional.addEventListener("submit", async (e) => {
 });
 
 
-// CARGAR FORM
+
 
 async function cargarProfesional(id) {
     try {
@@ -151,7 +142,6 @@ async function cargarProfesional(id) {
 }
 
 
-// DELETE
 
 async function eliminarProfesional(id) {
 
@@ -168,7 +158,6 @@ async function eliminarProfesional(id) {
     }
 }
 
-// LIMPIAR FORM
 
 function limpiarFormulario() {
     formProfesional.reset();
